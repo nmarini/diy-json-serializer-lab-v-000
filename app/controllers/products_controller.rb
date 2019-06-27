@@ -10,7 +10,6 @@ class ProductsController < ApplicationController
 
   def inventory
     product = Product.find(params[:id])
-    binding.pry
     if product.inventory > 0
       render plain: true
     else
