@@ -2,16 +2,16 @@ class ProductSerializer
   def self.serialize(product)
     serialized_product = '{'
 
-    serialized_product += '"id": ' + post.id.to_s + ', '
-    serialized_post += '"title": "' + post.title + '", '
-    serialized_post += '"description": "' + post.description + '", '
+    serialized_product += '"id": ' + product.id.to_s + ', '
+    serialized_product += '"title": "' + product.title + '", '
+    serialized_product += '"description": "' + product.description + '", '
 
     # the author association can also be represented in JSON
-    serialized_post += '"author": {'
-    serialized_post += '"name": "' + post.author.name + '"}'
+    serialized_product += '"author": {'
+    serialized_product += '"name": "' + product.author.name + '"}'
 
     # and end with the close brace
     serialized_product += '}'
   end
 
-end 
+end
