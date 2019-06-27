@@ -6,7 +6,7 @@ class ProductsController < ApplicationController
   def data
     post = Post.find(params[:id])
     render json: PostSerializer.serialize(post)
-  end 
+  end
 
   def inventory
     product = Product.find(params[:id])
